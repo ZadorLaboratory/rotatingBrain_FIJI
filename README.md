@@ -33,7 +33,11 @@ This is a description of how to create a rotating brain in FIJI
    <img src="https://user-images.githubusercontent.com/60980561/222280684-c3877096-8a39-4da8-8860-838ad97d4d51.png" width="400">
     
     Once the recording started, you can see the brain is rotating. When it finished, the output is a timelapse movie
+    
+    Note: You can record a Movie with bigger view by simply maximizing the window to full screen before start recording.
    <img src="https://user-images.githubusercontent.com/60980561/222281055-50be54f4-8a5a-4dfd-81bc-4ddc1d615349.png" width="400">
+   
+   
    
    
 ### 5. Adjust the rotating speed
@@ -43,7 +47,10 @@ This is a description of how to create a rotating brain in FIJI
    
 ### 6. Export
     Method 1: to .gif: File > Save As > Gif...
-       (Sometimes 
+      When there are too many colors, the color of gif may be off. You can try Method 2 described below.
+      
+    Method 2: to .avi: Plugins > Bio-Format > Bio-Format Exporter and export to .avi
+              to .mp4: open the avi in Windows Video Editor > New Video Project > Add the avi to 'Project library' > drag it to the 'Storyboard' > Select 'Finish Video' and save it as mp4 file.
     
 
  
