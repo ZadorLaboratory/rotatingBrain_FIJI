@@ -67,5 +67,22 @@ This is a description of how to create a rotating brain in FIJI
 ## Allen CCFv3 download    
     Link: http://help.brain-map.org/display/mouseconnectivity/API
     You can find the links here:
+   ![image](https://user-images.githubusercontent.com/60980561/222288348-5fbcda19-41e3-4e47-a417-33e89b71fd45.png)
+
+## Get brain outline
+    You can get the brain outline by getting the edge between zero and non-zero voxel in Allen annotation map. (Optional: after getting the edge, filter the edge with a 3D average filter.)
+    This can be done in ImageJ Macro or other language/software. 
     
-  <img src="(https://user-images.githubusercontent.com/60980561/222288010-359a6c09-18fb-4560-94b6-8a81d7d3bed4.png" width="400">
+    Example in ImageJ:
+        setMinAndMax(0, 1);
+        run("Apply LUT", "stack");          // Thresholding zero and non-zero voxel
+        run("Find Edges", "stack");         // Get outline
+        run("8-bit");                       // (For adjusting 3D transparentcy using intensity, 8-bit saturation = 255)
+        run("Mean 3D...", "x=5 y=5 z=5");   // Average filter
+        setMinAndMax(0, 400);               // (For adjusting 3D transparentcy)
+        run("RGB Color");
+        
+ <img src="https://user-images.githubusercontent.com/60980561/222293496-ee5ff143-36f6-4673-9c55-0bd633f272b6.png" width="700">
+
+
+    
