@@ -53,4 +53,16 @@ This is a description of how to create a rotating brain in FIJI
               to .mp4: open the avi in Windows Video Editor > New Video Project > Add the avi to 'Project library' > drag it to the 'Storyboard' > Select 'Finish Video' and save it as mp4 file.
     
 
- 
+## Additional Notes
+    1. When there are multiple channels, the images can be changed into Hyperstacks. You can adjust the LUT/Brightness/Contrast for individual channels. Once the adjustments are done, convert it to RGB.
+    2. If you feel the movie is silight too dark or there something you want to adjust, you can use ImageJ function within a for loop in Macro. 
+    Example for brightness adjustment:
+        for (i = 1; i <=180; i++) {
+            setSlice(i);
+            setMinAndMax(0, 150);
+        }
+    
+
+
+# Additional information
+## 
